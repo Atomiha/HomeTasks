@@ -1,0 +1,38 @@
+main {
+  background-color: #fffefe;
+}
+label {
+  color: #333333;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: "Open Sans", monospace;
+}
+
+h1 {
+  color: #333333;
+  font-size: 36px;
+  font-weight: 700;
+  font-family: "Open Sans", monospace;
+}
+h2 {
+  color: #666666;
+  font-size: 18px;
+  font-weight: 400;
+  font-family: "Open Sans", monospace;
+}
+
+input,
+textarea,
+select {
+  background-color: #f5f5f5;
+  color: #999999;
+  font-size: 16px;
+  font-weight: 400;
+  font-family: "Open Sans", monospace;
+  font-style: italic;
+}
+
+button {
+  background-color: #089fe0;
+  color: white;
+}
