@@ -1,0 +1,76 @@
+* {
+  background-color: #374151;
+}
+
+.heroText {
+  font-family: "Roboto";
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 32px;
+  letter-spacing: 0%;
+  color: white;
+}
+
+.footerText {
+  font-family: "Roboto";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 30px;
+  letter-spacing: 0%;
+  color: white;
+}
+
+header a,
+header button {
+  font-family: "Roboto";
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: white;
+  text-decoration: none;
+}
+.heroSection {
+  color: white;
+}
+section p {
+  font-family: "Roboto";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 100%;
+  letter-spacing: 0%;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Roboto";
+  font-weight: 400;
+  letter-spacing: 0%;
+  text-align: center;
+}
+
+h1 {
+  font-size: 24px;
+  line-height: 38px;
+}
+
+h2 {
+  font-size: 16px;
+  line-height: 28px;
+}
+h3 {
+  font-size: 14px;
+  line-height: 28px;
+}
+
+footer > p {
+  font-family: "Roboto";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 28px;
+  letter-spacing: 0%;
+  text-align: center;
+  color: white;
+  background-color: #121928;
+}
