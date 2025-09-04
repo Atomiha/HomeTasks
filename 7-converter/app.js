@@ -1,14 +1,18 @@
 function currencyConversion(sum, sourceCur, targetCur) {
-  if (sourceCur === "₽" && targetCur == "$") {
-    return sum / 81;
-  }
-  if (sourceCur === "$" && targetCur == "₽") {
-    return sum * 81;
-  }
+  const pair = {
+    "₽$": sum / 81,
+    "₽€": sum / 95,
+    "$₽": sum * 81,
+    "€₽": sum * 95,
+    "$€": sum / 1.17,
+    "€$": sum * 1.17,
+  };
   if (sourceCur === targetCur) {
     return sum;
   }
-  return null;
+  const key = sourceCur + targetCur;
+
+  return pair[key] ?? null;
 }
 
 money = prompt("Введите сумму для конвертации");
