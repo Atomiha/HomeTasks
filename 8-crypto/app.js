@@ -1,15 +1,14 @@
-const reversePartWord = (word, start, finish) =>
-  word.slice(start, finish).split("").reverse().join("");
+const crypto = (word) => {
+  const half = Math.floor(word.length / 2);
 
-const crypto = (password) => {
-  const half = password.length / 2;
-  return (
-    reversePartWord(password, 0, half) +
-    reversePartWord(password, half, password.length)
-  );
+  const first = word.slice(0, half).split("").reverse().join("");
+
+  const second = word.slice(-1) + word.slice(half + 1, -1) + word[half];
+
+  return first + second;
 };
 
-const check = (cryptoPassword, word) => crypto(cryptoPassword) === word;
+const check = (cryptoPassword, word) => crypto(word) === cryptoPassword;
 
 console.log(crypto("password"));
-console.log(check("ssapdrow", "password"));
+console.log(check("ssapdorw", "password"));
