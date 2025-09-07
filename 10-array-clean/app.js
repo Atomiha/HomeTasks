@@ -3,7 +3,7 @@ const greaterFive = (num) => num > 5;
 function arrayFilter(arr, check) {
   let res = [];
   for (const element of arr) {
-    if (check(element)) {
+    if (!check(element)) {
       res.push(element);
     }
   }
