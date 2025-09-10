@@ -4,30 +4,41 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="./styles/style.css" />
   </head>
   <body>
     <header>
-      <ul>
-        <li><a href="#">B Мой блог</a></li>
-        <li><a href="#">HTML и CSS</a></li>
-        <li><a href="#">Frontend</a></li>
-        <li><a href="#">Backend</a></li>
-        <li>Поиск</li>
-      </ul>
+      <nav>
+        <ul>
+          <li>
+            <a href="#"><button type="submit">В</button></a>
+          </li>
+          <li><a href="#">Мой блог</a></li>
+          <li><a href="#">HTML и CSS</a></li>
+          <li><a href="#">Frontend</a></li>
+          <li><a href="#">Backend</a></li>
+          <li><input type="text" placeholder=" &#128269; Поиск" /></li>
+        </ul>
+      </nav>
     </header>
     <main>
-      <section>
+      <section class="heroSection">
+        <p>FRONTEND 12 мая 2024</p>
         <h1>Теория цвета - Как цвет влияет на поведение потребителей</h1>
-        <img src="./images/developer.png" alt="Фото разработчика" />
-        <ul>
-          <li><h2>Наталья Васильева</h2></li>
-          <li><h3>Разработчик</h3></li>
+        <img
+          src="./images/developer.png"
+          alt="Фото разработчика"
+          class="developerPhoto"
+        />
+        <ul class="developerName">
+          <li>Наталья Васильева</li>
+          <li>Разработчик</li>
         </ul>
-        <img src="./images/macStudio.png" alt="Теория цвета" />
+        <img src="./images/macStudio.png" alt="Теория цвета" class="mainImg" />
       </section>
 
       <section>
-        <p>
+        <p class="heroText">
           Теория цвета — это особенности эмоционального восприятия человеком тех
           или иных цветовых решений. Цвета и различные их комбинации влияют на
           психику человека, а значит, во многом определяют его поведение.
@@ -40,7 +51,7 @@
       </section>
 
       <section>
-        <p>
+        <p class="footerText">
           Универсального ответа на вопрос, как тот или иной цвет влияет на
           разных людей, нет. Эмоциональная и поведенческая реакция каждого
           человека зависит от личного опыта. Вместе с тем можно выделить
@@ -55,6 +66,6 @@
         </p>
       </section>
     </main>
-    <footer>Все права защищены &copy; 2024</footer>
+    <footer><p>Все права защищены &copy; 2024</p></footer>
   </body>
 </html>
