@@ -27,11 +27,22 @@ function isDate(str) {
 const possibleDates = [
   "10-02-2022",
   "тест",
-  "11/22/2023",
+  "11/12/2023",
   "00/13/2022",
   "41/12/2023",
   "10.02.2022",
 ];
 
-const dates = possibleDates.filter((date) => isDate(date));
+const dates = possibleDates
+  .filter((date) => isDate(date))
+  .map((date) => {
+    if (date.includes(".")) {
+      return date.replaceAll(".", "-");
+    }
+    if (date.includes("/")) {
+      const [month, day, year] = date.split("/");
+      return [day, month, year].join("-");
+    }
+    return date;
+  });
 console.log(dates);
