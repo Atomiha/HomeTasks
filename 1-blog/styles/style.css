@@ -33,12 +33,20 @@ h3 {
 nav {
   padding: 33px 50px;
   margin-bottom: 60px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 ul {
   list-style: none;
   padding: 0;
   margin: 0;
+}
+
+nav ul {
+  display: flex;
+  gap: 34px;
+  justify-content: center;
 }
 
 main section {
@@ -100,6 +108,11 @@ section p {
 
 .developerName {
   margin-bottom: 28px;
+  display: flex;
+  color: white;
+  max-width: 1200px;
+  justify-content: center;
+  gap: 16px;
 }
 
 .mainImg {
@@ -112,6 +125,7 @@ section p {
   color: white;
   margin: 0 auto;
   margin-bottom: 14px;
+  max-width: 1200px;
 }
 .heroText {
   font-family: "Roboto";
@@ -120,6 +134,8 @@ section p {
   line-height: 32px;
   letter-spacing: 0%;
   color: white;
+  max-width: 1200px;
+  margin: 0 auto 69px;
 }
 
 .footerText {
@@ -129,4 +145,6 @@ section p {
   line-height: 30px;
   letter-spacing: 0%;
   color: white;
+  max-width: 1200px;
+  margin: 0 auto 69px;
 }
