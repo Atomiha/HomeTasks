@@ -1,18 +1,22 @@
 function isCardNumber(num) {
   num = num.trim().replaceAll("-", "");
   if (!Number(num) || num.length !== 16) {
+    console.log("1");
     return false;
   }
   const numArr = num.split("").map((el) => Number(el));
+  console.log(numArr);
   const numArrDoubleEvenElem = numArr.map((el, i) =>
-    i % 2 === 0 ? (el * 2) % 9 : el
+    i % 2 === 0 && el % 9 !== 0 ? (el * 2) % 9 : el
   );
+
+  console.log(numArrDoubleEvenElem);
   const resSum = numArrDoubleEvenElem.reduce((sum, el) => sum + el, 0);
 
   return resSum % 10 === 0;
 }
 
-const positiveCardNum = "4561-2612-1234-5464";
+const positiveCardNum = "2200-2402-2752-5975";
 
 console.log(isCardNumber(positiveCardNum));
 
