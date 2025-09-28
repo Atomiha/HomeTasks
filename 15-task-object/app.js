@@ -1,3 +1,4 @@
+"use strict";
 const toDoList = {
   tasks: [{ title: "Помыть посуду", id: 1, priority: 1 }],
   addTask: function (task) {
@@ -8,11 +9,11 @@ const toDoList = {
     }
     return this.tasks;
   },
-  deleteTask: function (id) {
+  deleteTask(id) {
     this.tasks = this.tasks.filter((t) => t.id !== id);
     return this.tasks;
   },
-  updateTask: function (id, title, priority) {
+  updateTask(id, title, priority) {
     const task = this.tasks.find((t) => t.id === id);
     if (task) {
       task.title = title ?? task.title;
@@ -20,7 +21,7 @@ const toDoList = {
     }
     return this.tasks;
   },
-  sortTaskByPriority: function () {
+  sortTaskByPriority() {
     this.tasks = this.tasks.sort((t1, t2) => t1.priority - t2.priority);
     return this.tasks;
   },
@@ -40,3 +41,45 @@ console.log(toDoList.tasks);
 
 toDoList.sortTaskByPriority();
 console.log(toDoList.tasks);
+
+function removePassword(reset) {
+  this.password = reset ? undefined : this.password;
+}
+
+const user = {
+  login: "example@mail.com",
+  password: "12345",
+};
+
+// const removePasswordUser = removePassword.bind(user);
+// removePasswordUser(true);
+const removePasswordUser = removePassword.bind(user, true);
+removePasswordUser();
+console.log(user);
+
+const userInfo = {
+  balance: 0,
+  operations: 0,
+  increase(sum) {
+    this.balance += sum;
+    this.operations++;
+  },
+};
+
+function user_new() {
+  const userObj = { ...userInfo };
+  return function () {
+    return userObj;
+  };
+}
+
+const user1 = user_new();
+console.log(user1());
+user1().increase(100);
+user1().increase(100);
+console.log(user1());
+
+const user2 = user_new();
+console.log(user2());
+user2().increase(200);
+console.log(user2());
