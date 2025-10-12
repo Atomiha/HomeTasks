@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Тарифы</title>
+
+    <!-- Шрифты -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./styles/style.css" />
+  </head>
+  <body>
+    <section class="section">
+      <div class="section__wrapper">
+        <header class="headling">
+          <h1 class="headling__top">Тарифы</h1>
+          <p class="headling__buttom">
+            Все тарифы имеют полный функционал и отличаются только количеством
+            месяцев и выгодой
+          </p>
+        </header>
+
+        <div class="plans-wrapper">
+          <!-- 1 месяц -->
+          <article class="plan">
+            <div class="plan__content">
+              <div class="plan__header">1 месяц</div>
+              <div class="plan__description">
+                Тариф подойдёт тем, кто ведёт краткосрочные проекты
+              </div>
+
+              <div class="plan__stats">
+                <div class="plan__stat plan__stat--label">Общая стоимость</div>
+                <div class="plan__stat plan__stat--value">1 990 ₽</div>
+              </div>
+
+              <div class="plan__stats">
+                <div class="plan__stat plan__stat--label">Ваша выгода</div>
+                <div class="plan__stat plan__stat--value">0 ₽</div>
+              </div>
+
+              <div class="plan__stats plan__stats--accent">
+                <div class="plan__stat plan__stat--label">Стоимость месяца</div>
+                <div class="plan__stat plan__stat--value">1 990 ₽/мес</div>
+              </div>
+
+              <div class="plan__button">
+                <a href="#" class="button button--primary">Бесплатно 14 дней</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 6 месяцев -->
+          <article class="plan plan--has-badge">
+            <div class="plan__content">
+              <div class="plan__badge plan__badge--save">Выгода 25%</div>
+
+              <div class="plan__header">6 месяцев</div>
+              <div class="plan__description">
+                Тариф подойдёт для тех, кто уверенно ведёт финансовый учёт
+              </div>
+
+              <div class="plan__stats">
+                <div class="plan__stat plan__stat--label">Общая стоимость</div>
+                <div class="plan__stat plan__stat--value">8 940 ₽</div>
+              </div>
+
+              <div class="plan__stats">
+                <div class="plan__stat plan__stat--label">Ваша выгода</div>
+                <div class="plan__stat">
+                  <span class="plan__pill plan__pill--save">3 000 ₽</span>
+                </div>
+              </div>
+
+              <div class="plan__stats plan__stats--accent">
+                <div class="plan__stat plan__stat--label">Стоимость месяца</div>
+                <div class="plan__stat plan__stat--value">1 490 ₽/мес</div>
+              </div>
+
+              <div class="plan__button">
+                <a href="#" class="button button--primary">Бесплатно 14 дней</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 12 месяцев -->
+          <article class="plan plan--highlight plan--has-badge">
+            <div class="plan__content">
+              <div class="plan__badge plan__badge--save plan__badge--invert">
+                Выгода 50%
+              </div>
+
+              <div class="plan__header">12 месяцев</div>
+              <div class="plan__description">
+                Тариф подойдёт тем, кто уверенно ведёт финансовый учёт и хочет
+                сэкономить
+              </div>
+
+              <div class="plan__stats">
+                <div class="plan__stat plan__stat--label">Общая стоимость</div>
+                <div class="plan__stat plan__stat--value">11 880 ₽</div>
+              </div>
+
+              <div class="plan__stats">
+                <div class="plan__stat plan__stat--label">Ваша выгода</div>
+                <div class="plan__stat">
+                  <span class="plan__pill plan__pill--save plan__pill--invert"
+                    >12 000 ₽</span
+                  >
+                </div>
+              </div>
+
+              <div class="plan__stats plan__stats--accent plan__stats--invert">
+                <div class="plan__stat plan__stat--label">Стоимость месяца</div>
+                <div class="plan__stat plan__stat--value">990 ₽/мес</div>
+              </div>
+
+              <div class="plan__button">
+                <a href="#" class="button button--inverted"
+                  >Бесплатно 14 дней</a
+                >
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
