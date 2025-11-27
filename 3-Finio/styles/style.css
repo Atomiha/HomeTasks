@@ -1,0 +1,231 @@
+:root {
+  --page-bg: #ffffff;
+  --text: #0b0d12;
+  --muted: #9aa3af;
+  --card: #ffffff;
+  --card-blue: #4f7dff;
+  --border: #e8ecf3;
+  --shadow: 0 12px 32px rgba(16, 24, 40, 0.12);
+  --radius: 18px;
+  --btn-blue: #4f7dff;
+  --btn-blue-hover: #426ef0;
+  --save-green: #2bb673;
+  --pill-yellow: #ffd166;
+}
+
+/* base */
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  background: var(--page-bg);
+  color: var(--text);
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial,
+    "Noto Sans", "Helvetica Neue", sans-serif;
+}
+
+.section {
+  padding: clamp(40px, 4.5vw, 72px) 16px;
+}
+.section__wrapper {
+  max-width: 1160px;
+  margin: 0 auto;
+}
+
+.headling {
+  text-align: center;
+  margin: 0 0 clamp(28px, 4vw, 44px);
+}
+.headling__top {
+  font-family: Montserrat, Inter, sans-serif;
+  font-weight: 800;
+  font-size: clamp(32px, 4.5vw, 56px);
+  margin: 0 0 10px;
+}
+.headling__buttom {
+  color: #b4bcc8;
+  max-width: 780px;
+  margin: 0 auto;
+}
+
+/* grid */
+.plans-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+@media (max-width: 980px) {
+  .plans-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 640px) {
+  .plans-wrapper {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+}
+
+/* card */
+.plan {
+  position: relative;
+  border-radius: var(--radius);
+  background: var(--card);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+.plan__content {
+  padding: 28px;
+  display: grid;
+  gap: 16px;
+  padding-top: 93px;
+}
+.plan--has-badge .plan__content {
+  padding-top: 80px;
+}
+@media (max-width: 640px) {
+  .plan--has-badge .plan__content {
+    padding-top: 56px;
+  }
+}
+
+.plan__header {
+  font-weight: 800;
+  font-size: 26px;
+  letter-spacing: 0.2px;
+}
+.plan__description {
+  color: #8b95a3;
+  font-size: 15px;
+}
+
+.plan__stats {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 0;
+  border-top: 1px solid var(--border);
+}
+.plan__stats--accent {
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 14px 16px;
+  background: #f8fafc;
+  margin-top: 2px;
+}
+.plan__stat {
+  font-size: 15px;
+}
+.plan__stat--label {
+  color: #6b7280;
+}
+.plan__stat--value {
+  font-weight: 700;
+}
+
+/* badge */
+.plan__badge {
+  position: absolute;
+  left: 24px;
+  top: 18px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 12px;
+}
+.plan__badge--save {
+  background: #d9f6e7;
+  color: #0f3a25;
+  border: 1px solid #b8ebd2;
+}
+
+/* pill */
+.plan__pill {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 10px;
+  font-weight: 800;
+  font-size: 14px;
+}
+.plan__pill--save {
+  background: var(--pill-yellow);
+  color: #2a2a2a;
+}
+
+/* blue card */
+.plan--highlight {
+  background: var(--card-blue);
+  border: none;
+  color: #fff;
+}
+.plan--highlight .plan__description {
+  color: #e9f0ff;
+}
+.plan--highlight .plan__stat--label {
+  color: #e4ebff;
+  opacity: 0.9;
+}
+.plan--highlight .plan__stat--value {
+  color: #ffffff;
+}
+.plan--highlight .plan__stats {
+  border-top-color: rgba(255, 255, 255, 0.25);
+}
+.plan--highlight .plan__stats--accent {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.35);
+}
+.plan--highlight .plan__badge--invert {
+  background: #b4f3cd;
+  color: #0f3a25;
+  border: 1px solid #95e7b7;
+}
+.plan--highlight .plan__pill--invert {
+  background: #ffdf86;
+  color: #2a2a2a;
+}
+
+/* buttons */
+.button {
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding: 14px 18px;
+  border-radius: 28px;
+  font-weight: 800;
+  transition: filter 0.15s ease, background 0.15s ease;
+}
+.button--primary {
+  background: var(--btn-blue);
+  color: #fff;
+}
+.button--primary:hover {
+  filter: brightness(0.95);
+}
+.button--inverted {
+  background: #ffffff;
+  color: var(--btn-blue);
+}
+.button--inverted:hover {
+  filter: brightness(0.96);
+}
+
+/* responsive tweaks */
+@media (max-width: 640px) {
+  .plan__content {
+    padding: 22px;
+  }
+  .plan__header {
+    font-size: 24px;
+  }
+  .plan__stat {
+    font-size: 14px;
+  }
+}
