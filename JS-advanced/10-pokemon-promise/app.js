@@ -24,7 +24,7 @@ const url = "https://pokeapi.co/api/v2/pokemon/ditto";
 function getData(url, errorMessage) {
     return fetch(url).then((response) => {
         if (!response.ok) {
-            throw new Error(`${errorMessage}  ${response.status}`).message;
+            throw new Error(`${errorMessage}  ${response.status}`);
         }
         return response.json();
     });
